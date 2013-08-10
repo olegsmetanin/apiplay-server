@@ -1,0 +1,18 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET		/										controllers.Application.moduleAction(ngModule = "home", js="angular.module('core').constant('currentProject', null).constant('userGroups', []);", backendMode = "")
+GET		/projects								controllers.Application.redirect(url = "/#!/projects/listview")
+GET		/projects/:projectid					controllers.Application.project(projectid, backendMode = "")
+
+POST	/api/v1									controllers.APIv1.exec
+
+POST	/login									controllers.APIv1.login
+POST	/logout									controllers.APIv1.logout
+POST	/user-groups							controllers.APIv1.userGroups
+POST	/current-user							controllers.APIv1.currentUser
+
+#DevAssets in dev mode get from ng-app, in prod mode get from public
+GET		/*file							controllers.DevAssets.at(path="ng-app", file, prodpath="/public")

@@ -1,13 +1,24 @@
-*.class
-*.log
+logs
+project/project
+project/target
+target
+tmp
+dist
 
-# sbt specific
-dist/*
-target/
-lib_managed/
-src_managed/
-project/boot/
-project/plugins/project/
+sbt-launch.jar
 
-# Scala-IDE specific
-.scala_dependencies
+node_modules
+.npm-debug.log
+
+.DS_Store
+._.DS_Store
+._*
+
+ng-app/modules/build
+ng-app/modules/dist
+ng-app/components
+public/ng-app
+
+play.h2.db
+play.lock.db
+play.trace.db
