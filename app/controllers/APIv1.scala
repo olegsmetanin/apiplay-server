@@ -110,7 +110,7 @@ def index = Action { request =>
         "id" -> JsString(project.folder) ::
           "name" -> JsString(project.name) :: Nil)
     }
-
+    Thread.sleep(5000);
     Ok(Json.obj("projects" -> JsArray(projects)))
   }
 

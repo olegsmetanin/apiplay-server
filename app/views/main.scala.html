@@ -8,7 +8,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <style type="text/css">
-
     body {
         padding-top: 60px;
         padding-bottom: 40px;
@@ -24,9 +23,6 @@
             padding-right: 5px;
         }
     }
-
-
-
     .centered {
         position: fixed;
         top: 50%;
@@ -247,40 +243,11 @@
     })(this, document);
 
 
-    (function() {
 
-        @yepnopeScripts
 
-        var percent = (function() {
-            var val = 0;
-            return {
-                add: function(addVal) {
-                    val += addVal;
-                    document.getElementById("percent").setAttribute("style", "width: " + Math.floor(val) + "%");
-                }
-            }
+    @yepnopeScripts
 
-        })();
 
-        yepnope({
-            load: resourceList,
-            callback: function(url, result, key) {
-                percent.add(100 / resourceList.length);
-            },
-            complete: function() {
-                var uiView = document.createElement("div"),
-                    percent = document.getElementById("percent"),
-                    wrap = percent.parentNode,
-                    master = wrap.parentNode;
-
-                uiView.setAttribute("ui-view", "");
-                master.replaceChild(uiView, wrap);
-                completeCb();
-
-            }
-        });
-
-    })();
     </script>
 
 

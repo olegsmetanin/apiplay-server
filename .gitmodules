@@ -1,3 +1,0 @@
-[submodule "ng-app"]
-	path = ng-app
-	url = git@github.com:olegsmith/apinet-client.git
